@@ -113,5 +113,17 @@ int main()
 
 #pragma endregion
 
+#pragma region Type Conversion 명시적 형 변환
+
+    int correct = 8;
+    int questions = 10;
+    double score = correct / (double)questions * 100;
+    // double score = correct questions * 100을 하게 되면 questions이 int이기 때문에 0%가 나오지만
+    // (double)로 형 변환을 해주면 80%가 나온다
+
+    std::cout << score << "%";
+
+#pragma endregion
+
     return 0;
 }
