@@ -146,9 +146,9 @@ int main()
 
 #pragma region 수학 관련 함수
 
-    double a = 3.99;
-    double b = 4;
-    double c;
+    //double a = 3.99;
+    //double b = 4;
+    //double c;
 
    // c = std::max(a, b); // max는 더 큰 숫자 출력
    // c = std::min(a, b); // min는 더 큰 숫자 출력
@@ -166,6 +166,23 @@ int main()
 #pragma endregion
 
 #pragma region 직각 삼각형 빗변 구하기
+
+    double a;
+    double b;
+    double c;
+
+    std::cout << "Enter side A: ";
+    std::cin >> a;
+    
+    std::cout << "Enter side B: ";
+    std::cin >> b;
+
+    /*a = pow(a, 2);
+    b = pow(b, 2);
+    c = sqrt(a + b);*/
+    c = sqrt(pow(a, 2) + pow(b, 2));
+
+    std::cout << "side C: " << c;
 
 #pragma endregion
 
