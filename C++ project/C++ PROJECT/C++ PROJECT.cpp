@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 #include <string> // getline할 떄 필요
+#include <cmath> // 수학
+
 //typedef std::string text_t;
 //typedef int number_t;
 using text_t = std::string;
@@ -121,7 +123,7 @@ int main()
     // double score = correct questions * 100을 하게 되면 questions이 int이기 때문에 0%가 나오지만
     // (double)로 형 변환을 해주면 80%가 나온다
 
-    std::cout << score << "%";
+    //std::cout << score << "%";
 
 #pragma endregion
 
@@ -130,15 +132,40 @@ int main()
     std::string name3;
     int age3;
 
-    std::cout << "What's your name?: ";
+    //std::cout << "What's your name?: ";
     //std::cin >> name3; std::cin만 쓰면 공백이 출력안됨 Yebin Lee에서 Lee가 출력이 안됨
-    std::getline(std::cin >> std::ws , name3); // Yebin Lee 출력 가능 
+    //std::getline(std::cin >> std::ws , name3); // Yebin Lee 출력 가능 
 
-    std::cout << "당신은 몇살입니까?: ";
-    std::cin >> age3;
+    //std::cout << "당신은 몇살입니까?: ";
+    //std::cin >> age3;
 
-    std:: cout << "Hello " << name3 << '\n';
-    std::cout << age3 << "살";
+    //std:: cout << "Hello " << name3 << '\n';
+    //std::cout << age3 << "살";
+
+#pragma endregion
+
+#pragma region 수학 관련 함수
+
+    double a = 3.99;
+    double b = 4;
+    double c;
+
+   // c = std::max(a, b); // max는 더 큰 숫자 출력
+   // c = std::min(a, b); // min는 더 큰 숫자 출력
+
+    //c = pow(2, 3); // 2의 3제곱
+    //c = pow(2, 4); // 2의 4제곱
+    //c = sqrt(9);  // 매개변수로 들어온 숫자에 루트를 씌워서 계산한 값을 반환해줌 sqrt9는 루트9이기 때문에 반환하면 3
+    //c = abs(-3); 절대값 함수
+    //c = round(a); 반올림 함수 
+    //c = ceil(a); //올림 함수
+    //c = floor(a); //내림 함수
+
+    //std::cout << c; 
+
+#pragma endregion
+
+#pragma region 직각 삼각형 빗변 구하기
 
 #pragma endregion
 
