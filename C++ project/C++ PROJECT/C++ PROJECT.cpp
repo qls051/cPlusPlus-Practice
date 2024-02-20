@@ -92,8 +92,8 @@ int main()
 
     std::cout << firstName << '\n';
     std::cout << age << '\n';
-    // typedef는 
-
+    // typedef와 using의 차이는 타입 별칭을 만들 수 있냐 없냐 using만 만들 수 있다.
+    //using은 typedef보다 더 간결한 구문을 함수 포인터를 선언하는데 사용할 수 있다.
 #pragma endregion
 
     
