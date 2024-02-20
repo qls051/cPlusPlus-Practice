@@ -2,23 +2,32 @@
 //
 
 #include <iostream>
+#include <vector>
 
+//typedef std::string text_t;
+//typedef int number_t;
+using text_t = std::string;
+using number_t = int; // typedef로 한 것과 같음
+
+namespace first {
+    int x = 1;
+}
 int main()
 {
 #pragma region 기본 C++
 
     // 간단한 출력
-    std::cout << "I like pizza!\n";
-    std::cout << "It;s really good!\n";
+    //std::cout << "I like pizza!\n";
+    //std::cout << "It;s really good!\n";
 
     // 선언
-    int x = 5;
+    int z = 5;
     int y = 6;
-    int sum = x + y;
+    int sum = z + y;
 
-    std::cout << x << '\n';
-    std::cout << y << '\n';
-    std::cout << sum << '\n';
+    //std::cout << z << '\n';
+    //std::cout << y << '\n';
+    //std::cout << sum << '\n';
 
     // integer (whole number)
     int age = 21;
@@ -42,10 +51,11 @@ int main()
     std::string food = "pizza";
     std::string address = "123 fake st.";
 
-    std::cout << "Hello " << name << '\n';
-    std::cout << "You are " << age << "years old";
+   // std::cout << "Hello " << name << '\n';
+    //std::cout << "You are " << age << "years old";
 
 #pragma endregion
+
 #pragma region const
 
     double pi = 3.14159;
@@ -60,13 +70,31 @@ int main()
     const int HEIGHT = 1080;
 
 #pragma endregion
+
 #pragma region Namespaces
 
-    //fjdklsuroiefjdklks
-    //dfjdkslorel
+    int x = 0;
+
+    //std::cout << x; // x = 0 출력
+    // std::cout << first::x; // x = 1 출력
+
+    using namespace std;
+
+    string name2 = "bro";
+    //cout << "Hello " << name2; // std::cout할떄 std 생략 가능
     
 #pragma endregion
 
+#pragma region Typedef
+
+    text_t firstName = "Bro";
+    number_t age2 = 21;
+
+    std::cout << firstName << '\n';
+    std::cout << age << '\n';
+    // typedef는 
+
+#pragma endregion
 
     
     return 0;
