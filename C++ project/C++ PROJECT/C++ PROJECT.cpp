@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-
+#include <string> // getline할 떄 필요
 //typedef std::string text_t;
 //typedef int number_t;
 using text_t = std::string;
@@ -124,6 +124,24 @@ int main()
     std::cout << score << "%";
 
 #pragma endregion
+
+#pragma region User Input 사용자 입력
+
+    std::string name3;
+    int age3;
+
+    std::cout << "What's your name?: ";
+    //std::cin >> name3; std::cin만 쓰면 공백이 출력안됨 Yebin Lee에서 Lee가 출력이 안됨
+    std::getline(std::cin >> std::ws , name3); // Yebin Lee 출력 가능 
+
+    std::cout << "당신은 몇살입니까?: ";
+    std::cin >> age3;
+
+    std:: cout << "Hello " << name3 << '\n';
+    std::cout << age3 << "살";
+
+#pragma endregion
+
 
     return 0;
 }
