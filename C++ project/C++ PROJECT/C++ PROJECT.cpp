@@ -90,12 +90,28 @@ int main()
     text_t firstName = "Bro";
     number_t age2 = 21;
 
-    std::cout << firstName << '\n';
-    std::cout << age << '\n';
+    //std::cout << firstName << '\n';
+    //std::cout << age << '\n';
     // typedef와 using의 차이는 타입 별칭을 만들 수 있냐 없냐 using만 만들 수 있다.
     //using은 typedef보다 더 간결한 구문을 함수 포인터를 선언하는데 사용할 수 있다.
 #pragma endregion
 
-    
+#pragma region 산술 연산자(+ - * /)
+
+    int students = 20;
+
+    //students += 1;
+    //students++;
+
+    //students *= 2;
+
+    //students /= 2;
+
+    //int remainder = students % 3; % 나머지 구하는거
+
+    //std::cout << remainder;
+
+#pragma endregion
+
     return 0;
 }
