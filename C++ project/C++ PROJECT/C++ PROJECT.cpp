@@ -314,7 +314,7 @@ int main()
 #pragma region 논리 연산자
     // &&, ||, !
 
-    int temp;
+    /*int temp;
     bool sunny = true;
 
     std::cout << "입력해라 온도: ";
@@ -332,7 +332,40 @@ int main()
     }
     else {
         std::cout << "It is sunny outside";
+    }*/
+
+#pragma endregion
+
+#pragma region 온도 변환 프로그램
+
+    double temp;
+    char unit;
+
+    std::cout << "******* Temperature conversion ********\n";
+    std::cout << "F=Fahrenheit\n";
+    std::cout << "C = Celsius\n";
+    std::cout << "What unit would ou like to convert to: ";
+    std::cin >> unit;
+
+    if (unit == 'F' || unit == 'f') {
+        std::cout << "Enter the temperature in Celsius: ";
+        std::cin >> temp;
+
+        temp = (1.9 * temp + 32.0);
+        std::cout << "Temperature is: " << temp << "F\n";
     }
+    else if (unit == 'C' || unit == 'c') {
+        std::cout << "Enter the temperature in Fahrenheit: ";
+        std::cin >> temp;
+
+        temp = (temp - 32) / 1.8;
+        std::cout << "Temperature is: " << temp << "C\n";
+    }
+    else {
+        std::cout << "Please enter in only F or C";
+    }
+
+    std::cout << "***************\********\********\********\n";
 
 #pragma endregion
 
