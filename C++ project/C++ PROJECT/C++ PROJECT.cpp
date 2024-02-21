@@ -185,12 +185,12 @@ int main()
 
 #pragma region if
 
-    int age4;
+    //int age4;
 
     //std::cout << "Enter your age:";
     //std::cin >> age4;
 
-    if (age4 >= 18) {
+    /*if (age4 >= 18) {
         std::cout << "Welcome to the site!";
     }
     else if (age < 0) {
@@ -201,12 +201,54 @@ int main()
     }
     else {
         std::cout << "Your are not old enough to enter!";
-    }
+    }*/
 
 #pragma endregion
 
 #pragma region switch
 
+    /*int month;
+    std::cout << "Enter the month (1-12): ";
+    std::cin >> month;
+
+    switch (month)
+    {
+    case 1:
+        std::cout << "1월";
+        break;
+    case 2:
+        std::cout << "2월";
+        break;
+    default:
+        std::cout << " 1-12 사이의 숫자만 입력하세요";
+    }*/
+
+    char grade2;
+
+    std::cout << "What letter grade?: ";
+    std::cin >> grade2;
+
+    switch (grade2)
+    {
+        case 'A':
+            std::cout << "You did great!";
+            break;
+        case 'B':
+                std::cout << "You did good!";
+                break;
+        case 'C':
+            std::cout << "You did okay";
+            break;
+        case 'D':
+            std::cout << "You did not do good";
+            break;
+        case 'F':
+            std::cout << "Pool";
+            break;
+    default:
+        std::cout << "Please only enter in a letter grade (A-F)";
+        break;
+    }
 
 
 #pragma endregion
