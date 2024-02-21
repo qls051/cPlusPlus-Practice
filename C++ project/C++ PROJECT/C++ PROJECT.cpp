@@ -255,7 +255,7 @@ int main()
 
 #pragma region 간단한 계산기 프로그램
 
-    char op;
+    /*char op;
     double num1;
     double num2;
     double result;
@@ -293,7 +293,21 @@ int main()
         break;
     }
 
-    std::cout << "**********************************\n";
+    std::cout << "**********************************\n";*/
+
+#pragma endregion
+
+#pragma region 삼항 연산자
+
+    //int grade3 = 75;
+    //grade3 >= 60 ? std::cout << "You pass!" : std::cout << "You fail!";
+
+    //int number3 = 9;
+    //number3 % 2 == 1 ? std::cout << "나머지 1" : std::cout << "나머지 0";
+    
+    //bool hungry = true;
+    //hungry ? std::cout << "Yor are hungry" : std::cout << "You are full";
+    //std::cout << (hungry ? "you ae hungry" : "you are full");
 
 #pragma endregion
 
