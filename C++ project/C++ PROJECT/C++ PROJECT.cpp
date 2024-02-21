@@ -311,6 +311,31 @@ int main()
 
 #pragma endregion
 
+#pragma region 논리 연산자
+    // &&, ||, !
+
+    int temp;
+    bool sunny = true;
+
+    std::cout << "입력해라 온도: ";
+    std::cin >> temp;
+
+    if (temp > 0 && temp < 30) {
+        std::cout << "온도 is good";
+    }
+    else {
+    std:; cout << "The 온도 is bad";
+    }
+
+    if (!sunny) {
+        std::cout << "It is cloudy outside";
+    }
+    else {
+        std::cout << "It is sunny outside";
+    }
+
+#pragma endregion
+
 
     return 0;
 }
