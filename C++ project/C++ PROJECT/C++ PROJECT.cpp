@@ -223,7 +223,7 @@ int main()
         std::cout << " 1-12 사이의 숫자만 입력하세요";
     }*/
 
-    char grade2;
+    /*char grade2;
 
     std::cout << "What letter grade?: ";
     std::cin >> grade2;
@@ -248,8 +248,52 @@ int main()
     default:
         std::cout << "Please only enter in a letter grade (A-F)";
         break;
+    }*/
+
+
+#pragma endregion
+
+#pragma region 간단한 계산기 프로그램
+
+    char op;
+    double num1;
+    double num2;
+    double result;
+
+    std::cout << "*********** CALCULATOR ***********\n";
+
+    std::cout << "Enter either (+ _ * /): ";
+    std::cin >> op;
+
+    std::cout << "Enter #1: ";
+    std::cin >> num1;
+
+    std::cout << "Enter #2: ";
+    std::cin >> num2;
+
+    switch (op){
+    case '+':
+        result = num1 + num2;
+        std::cout << "result: " << result << '\n';
+        break;
+    case '-':
+        result = num1 - num2;
+        std::cout << "result: " << result << '\n';
+        break;
+    case '*':
+        result = num1 * num2;
+        std::cout << "result: " << result << '\n';
+        break;
+    case '/':
+        result = num1 / num2;
+        std::cout << "result: " << result << '\n';
+        break;
+    default:
+        std::cout << "That wasn't a valid response\n";
+        break;
     }
 
+    std::cout << "**********************************\n";
 
 #pragma endregion
 
