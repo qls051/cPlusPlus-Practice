@@ -393,7 +393,7 @@ int main()
 
 #pragma region While문
 
-    std::string name4;
+    /*std::string name4;
 
     while(name4.empty())
     {
@@ -401,8 +401,20 @@ int main()
         std::getline(std::cin, name4);
     }
 
-    std::cout << "Hello " << name4;
+    std::cout << "Hello " << name4;*/
 
+
+#pragma endregion
+
+#pragma region do while문
+
+int number4 = 0;
+    do
+    {
+    std::cout << "양수를 입력하요:";
+    std::cin >> number4;
+    } while (number4 < 0);
+    std::cout << "입력된 숫자는:" << number4;
 
 #pragma endregion
 
