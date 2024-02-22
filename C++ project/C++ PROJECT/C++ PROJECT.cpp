@@ -338,7 +338,7 @@ int main()
 
 #pragma region 온도 변환 프로그램
 
-    double temp;
+    /*double temp;
     char unit;
 
     std::cout << "******* Temperature conversion ********\n";
@@ -365,7 +365,29 @@ int main()
         std::cout << "Please enter in only F or C";
     }
 
-    std::cout << "***************\********\********\********\n";
+    std::cout << "***************\********\********\********\n";*/
+
+#pragma endregion
+
+#pragma region 닉네임 입력할때 유용한 함수들
+
+    std::string name4;
+
+    std::cout << "Enter your name: ";
+    std::getline(std::cin, name4);
+    
+    name4.append("@gmail.com");
+    std::cout << "our username is now " << name4;
+
+    /*if (name4.length() > 12) {
+        std::cout << "Your name 12자 넘을 수 없음";
+    }
+    else if (name4.empty()) {
+        std::cout << "이름이 비어있음";
+    }
+    else {
+        std::cout << "Welcome " << name4;
+    }*/
 
 #pragma endregion
 
