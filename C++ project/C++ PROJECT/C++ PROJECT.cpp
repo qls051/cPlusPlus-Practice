@@ -408,13 +408,22 @@ int main()
 
 #pragma region do while문
 
-int number4 = 0;
+    /*int number4 = 0;
     do
     {
     std::cout << "양수를 입력하요:";
     std::cin >> number4;
     } while (number4 < 0);
-    std::cout << "입력된 숫자는:" << number4;
+    std::cout << "입력된 숫자는:" << number4;*/
+
+#pragma endregion
+
+#pragma region for문
+
+    for (int i = 3; i >= 1; i--) {
+    std::cout << i << '\n';
+    }
+    std::cout << "Happ new year";
 
 #pragma endregion
 
