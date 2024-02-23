@@ -53,8 +53,8 @@ int main()
     std::string food = "pizza";
     std::string address = "123 fake st.";
 
-   // std::cout << "Hello " << name << '\n';
-    //std::cout << "You are " << age << "years old";
+    // std::cout << "Hello " << name << '\n';
+     //std::cout << "You are " << age << "years old";
 
 #pragma endregion
 
@@ -84,7 +84,7 @@ int main()
 
     string name2 = "bro";
     //cout << "Hello " << name2; // std::cout할떄 std 생략 가능
-    
+
 #pragma endregion
 
 #pragma region Typedef
@@ -173,7 +173,7 @@ int main()
 
     //std::cout << "Enter side A: ";
     //std::cin >> a;
-    
+
     //std::cout << "Enter side B: ";
     //std::cin >> b;
 
@@ -304,7 +304,7 @@ int main()
 
     //int number3 = 9;
     //number3 % 2 == 1 ? std::cout << "나머지 1" : std::cout << "나머지 0";
-    
+
     //bool hungry = true;
     //hungry ? std::cout << "Yor are hungry" : std::cout << "You are full";
     //std::cout << (hungry ? "you ae hungry" : "you are full");
@@ -375,7 +375,7 @@ int main()
 
     /*std::cout << "Enter your name: ";
     std::getline(std::cin, name4);*/
-    
+
     /*name4.append("@gmail.com");
     std::cout << "our username is now " << name4;*/
 
@@ -429,13 +429,37 @@ int main()
 
 #pragma region Break & continue
 
-    for (int i = 1; i <= 20; i++) {
+    /*for (int i = 1; i <= 20; i++) {
         if (i == 13) {
             //break; // 13에서 멈춘다
             //continue // 13 건너뜀
         }
         std::cout << i << '\n';
-    }
+    }*/
+
+#pragma endregion
+
+#pragma region 중첩 loops
+
+    /*int 행;
+    int 열;
+    char 기호;
+
+    std::cout << "행을 입력하세요: ";
+    std::cin >> 행;
+
+    std::cout << "열을 입력하세요: ";
+    std::cin >> 열;
+
+    std::cout << "기호를 입력하세요: ";
+    std::cin >> 기호;
+
+    for (int i = 1; i <= 행; i++) {
+        for (int j = 1; j <= 열; j++) {
+            std::cout << 기호;
+        }
+        std::cout << '\n';
+    }*/
 
 #pragma endregion
 
