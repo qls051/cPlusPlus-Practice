@@ -420,10 +420,22 @@ int main()
 
 #pragma region for문
 
-    for (int i = 3; i >= 1; i--) {
+    /*for (int i = 3; i >= 1; i--) {
     std::cout << i << '\n';
     }
-    std::cout << "Happ new year";
+    std::cout << "Happ new year";*/
+
+#pragma endregion
+
+#pragma region Break & continue
+
+    for (int i = 1; i <= 20; i++) {
+        if (i == 13) {
+            //break; // 13에서 멈춘다
+            //continue // 13 건너뜀
+        }
+        std::cout << i << '\n';
+    }
 
 #pragma endregion
 
