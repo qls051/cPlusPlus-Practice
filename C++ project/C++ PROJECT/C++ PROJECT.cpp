@@ -463,6 +463,16 @@ int main()
 
 #pragma endregion
 
+#pragma region 난수 생성
+
+    srand(time(NULL));
+
+    int num = (rand() % 100) + 1; // 1 ~ 100까지 랜덤한 숫자 
+
+    std::cout << num;
+
+#pragma endregion
+
 
     return 0;
 }
