@@ -477,7 +477,7 @@ int main()
 
 #pragma region 무작위 이벤트 생성기
 
-    srand(time(0));
+    /*srand(time(0));
     int randNum = rand() % 5 + 1;
 
     switch (randNum)
@@ -492,10 +492,40 @@ int main()
         break;
     case 5: std::cout << "You win a concert tickets\n";
         break;
-    }
+    }*/
 
 #pragma endregion
 
+#pragma region 숫자 추측 게임
+
+    int num;          // 랜덤으로 생성된 숫자
+    int guess;        // 사용자의 추측값
+    int tries = 0;     // 시도 횟수
+
+    srand(time(NULL));
+    num = (rand() % 100) + 1;  // 1부터 100까지의 랜덤 숫자 생성
+
+    std::cout << "---------- 숫자 추측 게임 ----------" << std::endl;
+
+    do {
+    std::cout << " 1~100까지 숫자 중 추측하세요: ";
+    std::cin >> guess;
+    tries++;
+
+    if (guess > num) {
+        std::cout << "너무 높아요" << std::endl;
+    }
+    else if (guess < num) {
+        std::cout << "너무 낮아요" << std::endl;
+    }
+    else {
+        std::cout << "정답! 시도 횟수: " << tries << '\n';
+    }
+}   while (guess != num);
+
+std::cout << "----------------------------------" << std::endl;
+
+#pragma endregion
 
     return 0;
 }
