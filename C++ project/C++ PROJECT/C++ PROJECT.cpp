@@ -5,6 +5,7 @@
 #include <vector>
 #include <string> // getline할 떄 필요
 #include <cmath> // 수학
+#include <ctime> // 시간
 
 //typedef std::string text_t;
 //typedef int number_t;
@@ -465,11 +466,33 @@ int main()
 
 #pragma region 난수 생성
 
-    srand(time(NULL));
+    /*srand(time(NULL));
 
     int num = (rand() % 100) + 1; // 1 ~ 100까지 랜덤한 숫자 
 
-    std::cout << num;
+    std::cout << num;*/
+
+
+#pragma endregion
+
+#pragma region 무작위 이벤트 생성기
+
+    srand(time(0));
+    int randNum = rand() % 5 + 1;
+
+    switch (randNum)
+    {
+    case 1: std::cout << "You win a bumper sticker\n";
+        break;
+    case 2: std::cout << "You win a t-shirt\n";
+        break;
+    case 3: std::cout << "You win a free lunch\n";
+        break;
+    case 4: std::cout << "You win a gift card\n";
+        break;
+    case 5: std::cout << "You win a concert tickets\n";
+        break;
+    }
 
 #pragma endregion
 
