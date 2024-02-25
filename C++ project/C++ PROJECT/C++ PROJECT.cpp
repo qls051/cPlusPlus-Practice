@@ -23,7 +23,10 @@ namespace first {
 
 //double square(double length);
 
-std::string concatStrings(std::string string1, std::string string2);
+//std::string concatStrings(std::string string1, std::string string2);
+
+void bakePizza();
+void bakePizza(std::string topping1);
 
 int main()
 {
@@ -552,19 +555,34 @@ int main()
 
     std::cout << "Area: " << area << "cm^2\n";*/
 
-    std::string firstName = "Lee";
+    /*std::string firstName = "Lee";
     std::string lastName = "Yebin";
     std::string fullName = concatStrings(firstName, lastName);
 
-    std::cout << "Hello " << fullName;
+    std::cout << "Hello " << fullName;*/
 
 #pragma endregion
+
+#pragma region Overloaded functions
+
+    bakePizza("pepperoni");
+    return 0;
+
+#pragma endregion
+
     return 0;
 }
 /*double square(double length) {
     return length * length;
 }*/
 
-std::string concatStrings(std::string string1, std::string string2) {
+/*std::string concatStrings(std::string string1, std::string string2) {
     return string1 + " " + string2;
+}*/
+
+void bakePizza() {
+    std::cout << "Here is your pizza\n";
+}
+void bakePizza(std::string topping1) {
+    std::cout << "Here is your " << topping1 << " pizzz\n";
 }
