@@ -12,6 +12,11 @@
 using text_t = std::string;
 using number_t = int; // typedef로 한 것과 같음
 
+void happyBrithday(std::string brithdaygirl, int age5) {
+    std::cout << "생일 축하해 " << brithdaygirl << '\n';
+    std::cout << "생일 축하해 " << age5 << "살 생일" << '\n';
+} // 사용자 정의 함수
+
 namespace first {
     int x = 1;
 }
@@ -498,7 +503,7 @@ int main()
 
 #pragma region 숫자 추측 게임
 
-    int num;          // 랜덤으로 생성된 숫자
+    /*int num;          // 랜덤으로 생성된 숫자
     int guess;        // 사용자의 추측값
     int tries = 0;     // 시도 횟수
 
@@ -522,10 +527,19 @@ int main()
         std::cout << "정답! 시도 횟수: " << tries << '\n';
     }
 }   while (guess != num);
-
-std::cout << "----------------------------------" << std::endl;
+    std::cout << "----------------------------------" << std::endl;*/
 
 #pragma endregion
+
+#pragma region 사용자 정의 함수
+    
+    std::string name4 = "예빈";
+    int age5 = 18;
+
+    happyBrithday(name4, age5);
+    
+#pragma endregion
+
 
     return 0;
 }
