@@ -20,6 +20,11 @@ void happyBrithday(std::string brithdaygirl, int age5) {
 namespace first {
     int x = 1;
 }
+
+//double square(double length);
+
+std::string concatStrings(std::string string1, std::string string2);
+
 int main()
 {
 #pragma region 기본 C++
@@ -95,8 +100,8 @@ int main()
 
 #pragma region Typedef
 
-    text_t firstName = "Bro";
-    number_t age2 = 21;
+    //text_t firstName = "Bro";
+    //number_t age2 = 21;
 
     //std::cout << firstName << '\n';
     //std::cout << age << '\n';
@@ -106,7 +111,7 @@ int main()
 
 #pragma region 산술 연산자(+ - * /)
 
-    int students = 20;
+    //int students = 20;
 
     //students += 1;
     //students++;
@@ -123,9 +128,9 @@ int main()
 
 #pragma region Type Conversion 명시적 형 변환
 
-    int correct = 8;
-    int questions = 10;
-    double score = correct / (double)questions * 100;
+    //int correct = 8;
+    //int questions = 10;
+    //double score = correct / (double)questions * 100;
     // double score = correct questions * 100을 하게 되면 questions이 int이기 때문에 0%가 나오지만
     // (double)로 형 변환을 해주면 80%가 나온다
 
@@ -135,8 +140,8 @@ int main()
 
 #pragma region User Input 사용자 입력
 
-    std::string name3;
-    int age3;
+    //std::string name3;
+    //int age3;
 
     //std::cout << "What's your name?: ";
     //std::cin >> name3; std::cin만 쓰면 공백이 출력안됨 Yebin Lee에서 Lee가 출력이 안됨
@@ -173,9 +178,9 @@ int main()
 
 #pragma region 직각 삼각형 빗변 구하기
 
-    double a;
-    double b;
-    double c;
+    //double a;
+    //double b;
+    //double c;
 
     //std::cout << "Enter side A: ";
     //std::cin >> a;
@@ -533,13 +538,33 @@ int main()
 
 #pragma region 사용자 정의 함수
     
-    std::string name4 = "예빈";
+    /*std::string name4 = "예빈";
     int age5 = 18;
 
-    happyBrithday(name4, age5);
+    happyBrithday(name4, age5);*/
     
 #pragma endregion
 
+#pragma region Return
+    
+    /*double length = 5.0;
+    double area = square(length);
 
+    std::cout << "Area: " << area << "cm^2\n";*/
+
+    std::string firstName = "Lee";
+    std::string lastName = "Yebin";
+    std::string fullName = concatStrings(firstName, lastName);
+
+    std::cout << "Hello " << fullName;
+
+#pragma endregion
     return 0;
+}
+/*double square(double length) {
+    return length * length;
+}*/
+
+std::string concatStrings(std::string string1, std::string string2) {
+    return string1 + " " + string2;
 }
