@@ -25,8 +25,12 @@ namespace first {
 
 //std::string concatStrings(std::string string1, std::string string2);
 
-void bakePizza();
-void bakePizza(std::string topping1);
+/*void bakePizza();
+void bakePizza(std::string topping1);*/
+
+/*int myNum = 3;
+
+void printNum();*/
 
 int main()
 {
@@ -565,8 +569,15 @@ int main()
 
 #pragma region Overloaded functions
 
-    bakePizza("pepperoni");
-    return 0;
+    //bakePizza("pepperoni");
+    //return 0;
+
+#pragma endregion
+
+#pragma region Variable scope 변수의 유효 범위
+
+    //int myNum = 1;
+    //printNum();
 
 #pragma endregion
 
@@ -580,9 +591,14 @@ int main()
     return string1 + " " + string2;
 }*/
 
-void bakePizza() {
+/*void bakePizza() {
     std::cout << "Here is your pizza\n";
 }
 void bakePizza(std::string topping1) {
     std::cout << "Here is your " << topping1 << " pizzz\n";
-}
+}*/
+
+/*void printNum() {
+    int myNum2 = 2;
+    std::cout << myNum;
+}*/
