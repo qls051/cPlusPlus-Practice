@@ -6,6 +6,7 @@
 #include <string> // getline할 떄 필요
 #include <cmath> // 수학
 #include <ctime> // 시간
+#include <iomanip>
 
 //typedef std::string text_t;
 //typedef int number_t;
@@ -31,6 +32,10 @@ void bakePizza(std::string topping1);*/
 /*int myNum = 3;
 
 void printNum();*/
+
+void showBalance(double balance);
+double deposiit();
+double withdraw(double balance);
 
 int main()
 {
@@ -581,6 +586,43 @@ int main()
 
 #pragma endregion
 
+#pragma region Banking practice project
+    
+    double balance = 0;
+    int choice = 0;
+
+    do {
+        std::cout << "******************\n";
+        std::cout << "Enter your choice:\n";
+        std::cout << "******************\n";
+        std::cout << "1. Show Balance\n";
+        std::cout << "2. Deposit Money\n";
+        std::cout << "3. Withdraw Money\n";
+        std::cout << "4. Exit\n";
+        std::cin >> choice;
+
+        std:: cin.clear();
+        fflush(stdin);
+
+        switch (choice)
+        {
+        case 1: showBalance(balance);
+            break;
+        case 2: balance += deposiit();
+                showBalance(balance);
+            break;
+        case 3: balance -= withdraw(balance);
+                showBalance(balance);
+            break;
+        case 4:std::cout << "Thanks for visiting!";
+            break;
+        default:std::cout << "Invalid choice\n";
+            break;
+        }
+    } while (choice != 4);  
+    
+#pragma endregion
+
     return 0;
 }
 /*double square(double length) {
@@ -602,3 +644,40 @@ void bakePizza(std::string topping1) {
     int myNum2 = 2;
     std::cout << myNum;
 }*/
+
+void showBalance(double balance) {
+    std::cout << "Your balance is: $"<< std::setprecision(2)<< std::fixed << balance << '\n';
+}
+double deposiit() {
+    double amount = 0;
+
+    std::cout << "Enter amount to be deposited: ";
+    std::cin >> amount;
+
+    if (amount > 0) {
+        return amount;
+    }
+    else {
+        std::cout << "That's not a valid amount: ";
+        return 0;
+    }
+}
+double withdraw(double balance) {
+    double amount = 0;
+
+    std::cout << "Enter amount to be withdrawn: ";
+    std:: cin >> amount;
+
+    if (amount > balance) {
+        std::cout << "insufficient funds\n";
+        return 0;
+    }
+    else if (amount < 0) {
+        std::cout << "That;s not a val;id amount\n";
+    }
+    else {
+        return amount;
+    }
+
+    return amount;
+}
