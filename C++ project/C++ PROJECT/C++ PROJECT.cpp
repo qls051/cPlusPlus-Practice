@@ -33,9 +33,14 @@ void bakePizza(std::string topping1);*/
 
 void printNum();*/
 
-void showBalance(double balance);
+/*void showBalance(double balance);
 double deposiit();
-double withdraw(double balance);
+double withdraw(double balance);*/
+
+char getUserChoice();
+char getComputerChoice();
+void showChoice(char choice);
+void chooseWinner(char player, char computer);
 
 int main()
 {
@@ -588,7 +593,7 @@ int main()
 
 #pragma region Banking practice project
     
-    double balance = 0;
+    /*double balance = 0;
     int choice = 0;
 
     do {
@@ -619,9 +624,27 @@ int main()
         default:std::cout << "Invalid choice\n";
             break;
         }
-    } while (choice != 4);  
+    } while (choice != 4);  */
     
 #pragma endregion
+
+#pragma region 가위바위보 게임
+
+    char player;
+    char computer;
+
+    player = getUserChoice();
+    std::cout << "You choice: ";
+    showChoice(player);
+
+    computer = getComputerChoice();
+    std::cout << "Computer choice: ";
+    showChoice(computer);
+
+    chooseWinner(player, computer);
+
+#pragma endregion
+
 
     return 0;
 }
@@ -645,7 +668,7 @@ void bakePizza(std::string topping1) {
     std::cout << myNum;
 }*/
 
-void showBalance(double balance) {
+/*void showBalance(double balance) {
     std::cout << "Your balance is: $"<< std::setprecision(2)<< std::fixed << balance << '\n';
 }
 double deposiit() {
@@ -678,6 +701,82 @@ double withdraw(double balance) {
     else {
         return amount;
     }
-
     return amount;
+}*/
+
+char getUserChoice() {
+    char player;
+    std::cout << "가위바위보 게임\n";
+
+    do {
+        std::cout << "Choose one of the following\n";
+        std::cout << "***************************\n";
+        std::cout << "'r' 주먹\n";
+        std::cout << "'p' 보자기\n";
+        std::cout << "'s' 가위\n";
+        std::cin >> player;
+    } while (player != 'r' && player != 'p' && player != 's');
+
+      return player;
 }
+char getComputerChoice() {
+
+    srand(time(NULL));
+    int num = rand() % 3 + 1;
+
+    switch (num)
+    {
+    case 1 : return 'r';
+    case 2 : return 'p';
+    case 3 : return 's';
+
+    }
+    return 0;
+}
+void showChoice(char choice) {
+
+    switch (choice)
+    {
+    case 'r': std::cout << "주먹\n";
+        break;
+    case 'p': std::cout << "보자기\n";
+        break;
+    case 's':std::cout << "가위\n";
+        break;
+    default:
+        break;
+    }
+}
+void chooseWinner(char player, char computer) {
+    switch (player) {
+    case 'r':   if (computer=='r') {
+        std::cout << "비겼다!\n";
+                    }
+                 else if (computer == 'p') {
+        std::cout << "졌다";
+                    }
+                 else {
+        std::cout << "이겼다!";
+                    }
+    case 'p':   if (computer == 'r') {
+        std::cout << "이겼다!\n";
+    }
+            else if (computer == 'p') {
+        std::cout << "비겼다!";
+    }
+            else {
+        std::cout << "졌다!";
+    }
+    case 's':   if (computer == 'r') {
+        std::cout << "졌다!\n";
+    }
+            else if (computer == 'p') {
+        std::cout << "이겼다";
+    }
+            else {
+        std::cout << "비겼다!";
+    }
+    }
+}
+
+
