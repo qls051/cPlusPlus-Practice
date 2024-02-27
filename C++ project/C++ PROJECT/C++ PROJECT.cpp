@@ -37,10 +37,10 @@ void printNum();*/
 double deposiit();
 double withdraw(double balance);*/
 
-char getUserChoice();
+/*char getUserChoice();
 char getComputerChoice();
 void showChoice(char choice);
-void chooseWinner(char player, char computer);
+void chooseWinner(char player, char computer);*/
 
 int main()
 {
@@ -630,7 +630,7 @@ int main()
 
 #pragma region 가위바위보 게임
 
-    char player;
+    /*char player;
     char computer;
 
     player = getUserChoice();
@@ -641,7 +641,19 @@ int main()
     std::cout << "Computer choice: ";
     showChoice(computer);
 
-    chooseWinner(player, computer);
+    chooseWinner(player, computer);*/
+
+#pragma endregion
+
+#pragma region Arrays
+
+    /*std::string cars[3];
+
+    cars[0] = "Camaro";
+    cars[1] = "Mustang";
+
+    std::cout << cars[0] << '\n';
+    std::cout << cars[1];*/
 
 #pragma endregion
 
@@ -704,7 +716,7 @@ double withdraw(double balance) {
     return amount;
 }*/
 
-char getUserChoice() {
+/*char getUserChoice() {
     char player;
     std::cout << "가위바위보 게임\n";
 
@@ -776,7 +788,7 @@ void chooseWinner(char player, char computer) {
             else {
         std::cout << "비겼다!";
     }
-    }
 }
+}*/
 
 
