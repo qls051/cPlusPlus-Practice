@@ -657,6 +657,18 @@ int main()
 
 #pragma endregion
 
+#pragma region sizeof()
+
+    std::string name1 = "Bro";
+    double gpa = 2.5;
+    char grade1 = 'F';
+    bool student1 = true;
+    char grades[] = { 'A', 'B', 'C', 'D', 'E', 'F'};
+
+    std::cout << sizeof(gpa) << " bytes\n";
+    
+#pragma endregion
+
 
     return 0;
 }
