@@ -42,6 +42,8 @@ char getComputerChoice();
 void showChoice(char choice);
 void chooseWinner(char player, char computer);*/
 
+double getTotal(double prices[], int size);
+
 int main()
 {
 #pragma region 기본 C++
@@ -696,6 +698,16 @@ int main()
     
 #pragma endregion
 
+#pragma region Pass array to a function
+
+    double prices[] = { 49.99, 28.0, 94,94.8 };
+    int size = sizeof(prices) / sizeof(prices[0]);
+    double total = getTotal(prices, size);
+
+    std::cout << "$" << total;
+    
+#pragma endregion
+
 
     return 0;
 }
@@ -829,5 +841,15 @@ void chooseWinner(char player, char computer) {
     }
 }
 }*/
+
+double getTotal(double prices[], int size) {
+    double total = 0;
+
+    for (int i = 0; i < size; i++) {
+        total += prices[i];
+    }
+
+    return total;
+}
 
 
