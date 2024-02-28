@@ -659,14 +659,24 @@ int main()
 
 #pragma region sizeof()
 
-    std::string name1 = "Bro";
+    /*std::string name1 = "Bro";
     double gpa = 2.5;
     char grade1 = 'F';
     bool student1 = true;
     char grades[] = { 'A', 'B', 'C', 'D', 'E', 'F'};
 
-    std::cout << sizeof(gpa) << " bytes\n";
+    std::cout << sizeof(gpa) << " bytes\n";*/
     
+#pragma endregion
+
+#pragma region Iterate over an array 배열 반복
+
+    //std::string students[] = { "스폰지밥", "패트릭", "Squidward", "샌디"};
+    char grades[] = { 'A','B','C','D','E','F' };
+    for (int i = 0; i < sizeof(grades)/sizeof(char); i++) {
+        std::cout << grades[i] << '\n';
+    }
+
 #pragma endregion
 
 
