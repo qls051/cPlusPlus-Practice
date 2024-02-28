@@ -42,7 +42,9 @@ char getComputerChoice();
 void showChoice(char choice);
 void chooseWinner(char player, char computer);*/
 
-double getTotal(double prices[], int size);
+//double getTotal(double prices[], int size);
+
+int searchArray(int array[], int size, int element);
 
 int main()
 {
@@ -700,11 +702,32 @@ int main()
 
 #pragma region Pass array to a function
 
-    double prices[] = { 49.99, 28.0, 94,94.8 };
+    /*double prices[] = {49.99, 28.0, 94,94.8};
     int size = sizeof(prices) / sizeof(prices[0]);
     double total = getTotal(prices, size);
 
-    std::cout << "$" << total;
+    std::cout << "$" << total;*/
+    
+#pragma endregion
+
+#pragma region Search an array for an element 배열에서 요소 검색
+    
+    int numbers[] = { 1,2,3,4,5,6,7,8,9,10 };
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+    int index;
+    int myNum;
+
+    std::cout << "Enter element to search for: " << '\n';
+    std::cin >> myNum;
+
+    index = searchArray(numbers, size, myNum);
+
+    if (index != -1) {
+        std::cout << myNum << "is at index " << index;
+    }
+    else {
+        std::cout << myNum << "is not in the array";
+    }
     
 #pragma endregion
 
@@ -842,7 +865,7 @@ void chooseWinner(char player, char computer) {
 }
 }*/
 
-double getTotal(double prices[], int size) {
+/*double getTotal(double prices[], int size) {
     double total = 0;
 
     for (int i = 0; i < size; i++) {
@@ -850,6 +873,16 @@ double getTotal(double prices[], int size) {
     }
 
     return total;
+}*/
+
+int searchArray(int array[], int size, int element) {
+
+    for (int i = 0; i < size; i++) {
+        if (array[i] == element) {
+            return i;
+        }
+    }
+    return -1;
 }
 
 
