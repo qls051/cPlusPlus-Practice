@@ -672,11 +672,28 @@ int main()
 #pragma region Iterate over an array 배열 반복
 
     //std::string students[] = { "스폰지밥", "패트릭", "Squidward", "샌디"};
-    char grades[] = { 'A','B','C','D','E','F' };
+
+    /*char grades[] = {'A','B','C','D','E','F'};
     for (int i = 0; i < sizeof(grades)/sizeof(char); i++) {
         std::cout << grades[i] << '\n';
-    }
+    }*/
 
+#pragma endregion
+
+#pragma region foreach loop
+
+    /*std::string students[] = {"스폰지밥", "패트릭", "Squidward", "샌디"};
+
+    for (std::string student : students) {
+        std::cout << student << '\n';
+    }*/
+
+    /*int grades[] = {83,93,2,18};
+
+    for (int grade : grades) {
+        std::cout << grade << '\n';
+    }*/
+    
 #pragma endregion
 
 
