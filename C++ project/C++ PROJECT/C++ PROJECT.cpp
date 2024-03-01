@@ -47,7 +47,7 @@ void chooseWinner(char player, char computer);*/
 
 //int searchArray(int array[], int size, int element);
 
-void sort(int array[], int size);
+//void sort(int array[], int size);
 
 int main()
 {
@@ -735,15 +735,32 @@ int main()
 
 #pragma region Sort an array
 
-    int array[] = { 10, 1, 9, 2, 5, 4, 7, 8, 6, 3 };
+    /*int array[] = {10, 1, 9, 2, 5, 4, 7, 8, 6, 3};
     int size = sizeof(array) / sizeof(array[0]);
 
     sort(array, size);
 
     for (int element : array) {
         cout << element << " ";
-    }
+    }*/
         
+#pragma endregion
+
+#pragma region fill() function
+
+    /*string foods[10] = {"pizza","pizza","pizza","pizza","pizza","pizza","pizza","pizza","pizza","pizza",};
+    for (string food : foods) {
+        cout << food << '\n';
+    }*/
+    
+    const int SIZE = 100;
+    string foods[SIZE];
+
+    fill(foods, foods + SIZE, "pizza");
+    for (string food : foods) {
+        cout << food << '\n';
+    }
+
 #pragma endregion
 
 
@@ -900,7 +917,7 @@ void chooseWinner(char player, char computer) {
     return -1;
 }*/
 
-void sort(int array[], int size) {
+/*void sort(int array[], int size) {
     int temp;
     for (int i = 0; i < size - 1; i++) {
         for (int j = 0; j < size -i -1; j++) {
@@ -911,6 +928,6 @@ void sort(int array[], int size) {
             }
         }
     }
-}
+}*/
 
 
