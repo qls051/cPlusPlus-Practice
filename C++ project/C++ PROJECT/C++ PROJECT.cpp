@@ -8,6 +8,7 @@
 #include <ctime> // 시간
 #include <iomanip>
 
+using namespace std;
 //typedef std::string text_t;
 //typedef int number_t;
 using text_t = std::string;
@@ -44,7 +45,9 @@ void chooseWinner(char player, char computer);*/
 
 //double getTotal(double prices[], int size);
 
-int searchArray(int array[], int size, int element);
+//int searchArray(int array[], int size, int element);
+
+void sort(int array[], int size);
 
 int main()
 {
@@ -712,7 +715,7 @@ int main()
 
 #pragma region Search an array for an element 배열에서 요소 검색
     
-    int numbers[] = { 1,2,3,4,5,6,7,8,9,10 };
+    /*int numbers[] = {1,2,3,4,5,6,7,8,9,10};
     int size = sizeof(numbers) / sizeof(numbers[0]);
     int index;
     int myNum;
@@ -727,8 +730,20 @@ int main()
     }
     else {
         std::cout << myNum << "is not in the array";
+    }*/    
+#pragma endregion
+
+#pragma region Sort an array
+
+    int array[] = { 10, 1, 9, 2, 5, 4, 7, 8, 6, 3 };
+    int size = sizeof(array) / sizeof(array[0]);
+
+    sort(array, size);
+
+    for (int element : array) {
+        cout << element << " ";
     }
-    
+        
 #pragma endregion
 
 
@@ -875,7 +890,7 @@ void chooseWinner(char player, char computer) {
     return total;
 }*/
 
-int searchArray(int array[], int size, int element) {
+/*int searchArray(int array[], int size, int element) {
 
     for (int i = 0; i < size; i++) {
         if (array[i] == element) {
@@ -883,6 +898,19 @@ int searchArray(int array[], int size, int element) {
         }
     }
     return -1;
+}*/
+
+void sort(int array[], int size) {
+    int temp;
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size -i -1; j++) {
+            if (array[j] > array[j + 1]) {
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
 }
 
 
