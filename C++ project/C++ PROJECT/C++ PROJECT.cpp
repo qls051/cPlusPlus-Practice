@@ -49,7 +49,9 @@ void chooseWinner(char player, char computer);*/
 
 //void sort(int array[], int size);
 
-void swap(string x, string y);
+//void swap(string x, string y);
+
+//void printInfo(const string name, const int age);
 
 int main()
 {
@@ -886,14 +888,23 @@ int main()
     cout << "x: " << x << '\n';
     cout << "y: " << y << '\n';*/
 
-    string x = "Kool-aid";
+    /*string x = "Kool-aid";
     string y = "Water";
     string temp;
 
     swap(x, y);
 
     cout << "x: " << x << '\n';
-    cout << "y: " << y << '\n';
+    cout << "y: " << y << '\n';*/
+
+#pragma endregion
+
+#pragma region Const parameters
+
+    /*string name = "Yebin";
+    int age = 18;
+
+    printInfo(name, age);*/
 
 #pragma endregion
 
@@ -1064,11 +1075,15 @@ void chooseWinner(char player, char computer) {
     }
 }*/
 
-void swap(string x, string y) {
+/*void swap(string x, string y) {
     string temp;
     temp = x;
     x = y;
     y = temp;
-}
+}*/
 
+/*void printInfo(const string name, const int age) {
 
+    cout << name << '\n';
+    cout << age << '\n';
+}*/
