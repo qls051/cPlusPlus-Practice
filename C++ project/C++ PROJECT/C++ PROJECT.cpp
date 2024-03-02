@@ -765,7 +765,7 @@ int main()
 
 #pragma region fill an array with user input
 
-    string foods[5];
+    /*string foods[5];
     int size = sizeof(foods) / sizeof(foods[0]);
     string temp;
 
@@ -784,10 +784,27 @@ int main()
 
     for (int i = 0; !foods[i].empty();i++) {
         cout << foods[i] << '\n';
-    }
+    }*/
 
 #pragma endregion
 
+#pragma region Multidimensional arrays 다차원 배열
+
+    string cars[][3] =  {{"Mustang", "Escape", "F-150"},
+                        {"Corvette", "Equinox","Silverado"},
+                        {"Challenger", "Durango", "Ram 1500"}};
+
+    int rows = sizeof(cars) / sizeof(cars[0]);
+    int colums = sizeof(cars[0]) / sizeof(cars[0][0]);
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < colums; j++) {
+            cout << cars[i][j] << " ";
+        }
+        cout << '\n';
+    }
+
+#pragma endregion
 
     return 0;
 }
