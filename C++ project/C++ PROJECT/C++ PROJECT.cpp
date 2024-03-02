@@ -502,7 +502,7 @@ int main()
 
     /*srand(time(NULL));
 
-    int num = (rand() % 100) + 1; // 1 ~ 100까지 랜덤한 숫자 
+    int num = (rand() % 100) + 1; // 1 ~ 100까지 랜덤한 숫자
 
     std::cout << num;*/
 
@@ -561,16 +561,16 @@ int main()
 #pragma endregion
 
 #pragma region 사용자 정의 함수
-    
+
     /*std::string name4 = "예빈";
     int age5 = 18;
 
     happyBrithday(name4, age5);*/
-    
+
 #pragma endregion
 
 #pragma region Return
-    
+
     /*double length = 5.0;
     double area = square(length);
 
@@ -599,7 +599,7 @@ int main()
 #pragma endregion
 
 #pragma region Banking practice project
-    
+
     /*double balance = 0;
     int choice = 0;
 
@@ -632,7 +632,7 @@ int main()
             break;
         }
     } while (choice != 4);  */
-    
+
 #pragma endregion
 
 #pragma region 가위바위보 게임
@@ -673,7 +673,7 @@ int main()
     char grades[] = { 'A', 'B', 'C', 'D', 'E', 'F'};
 
     std::cout << sizeof(gpa) << " bytes\n";*/
-    
+
 #pragma endregion
 
 #pragma region Iterate over an array 배열 반복
@@ -700,7 +700,7 @@ int main()
     for (int grade : grades) {
         std::cout << grade << '\n';
     }*/
-    
+
 #pragma endregion
 
 #pragma region Pass array to a function
@@ -710,11 +710,11 @@ int main()
     double total = getTotal(prices, size);
 
     std::cout << "$" << total;*/
-    
+
 #pragma endregion
 
 #pragma region Search an array for an element 배열에서 요소 검색
-    
+
     /*int numbers[] = {1,2,3,4,5,6,7,8,9,10};
     int size = sizeof(numbers) / sizeof(numbers[0]);
     int index;
@@ -730,7 +730,7 @@ int main()
     }
     else {
         std::cout << myNum << "is not in the array";
-    }*/    
+    }*/
 #pragma endregion
 
 #pragma region Sort an array
@@ -743,7 +743,7 @@ int main()
     for (int element : array) {
         cout << element << " ";
     }*/
-        
+
 #pragma endregion
 
 #pragma region fill() function
@@ -752,7 +752,7 @@ int main()
     for (string food : foods) {
         cout << food << '\n';
     }*/
-    
+
     /*const int SIZE = 100;
     string foods[SIZE];
 
@@ -790,7 +790,7 @@ int main()
 
 #pragma region Multidimensional arrays 다차원 배열
 
-    string cars[][3] =  {{"Mustang", "Escape", "F-150"},
+    /*string cars[][3] = {{"Mustang", "Escape", "F-150"},
                         {"Corvette", "Equinox","Silverado"},
                         {"Challenger", "Durango", "Ram 1500"}};
 
@@ -802,11 +802,58 @@ int main()
             cout << cars[i][j] << " ";
         }
         cout << '\n';
-    }
+    }*/
 
 #pragma endregion
 
-    return 0;
+#pragma region QUIZ GAME
+
+    string questions[] = { "1. What year was C++ created?: ",
+                           "2. Who invented C++?: ",
+                           "3. What is the predecessor of C++?: ",
+                           "4. Is the Earth flat?: " };
+
+    string options[][4] = { {"A. 1969","B. 1975","C. 1985","D. 1989" },
+                          { "A. Guido van Rossum","B. Bjarne Stroustrup","C. John Carmack","D. Mark Zuckerburg" },
+                          { "A. C","B. C+","C. C--","D. B++" },
+                          { "A. yes","B. no","C. sometimes","D. What's Earth?" } };
+
+    char answerKey[] = { 'C','B','A','B' };
+
+    int size = sizeof(questions) / sizeof(questions[0]);
+    char guess;
+    int score = 0;
+
+    for (int i = 0; i < size; i++) {
+        cout << "---------------------------------------\n";
+        cout << questions[i] << '\n';
+        cout << "---------------------------------------\n";
+
+        for (int j = 0; j < sizeof(options[i]) / sizeof(options[i][0]);j++) {
+            cout << options[i][j] << '\n';
+        }
+
+        cin >> guess;
+        guess = toupper(guess); //  toupper은 소문자를 입력해도 대문자로 바꾸어줌
+
+        if (guess == answerKey[i]) {
+            cout << "Very Good!\n ";
+            score++;
+        }
+        else {
+            cout << "Bad\n ";
+            cout << "Answer: " << answerKey[i] << '\n';
+        }
+    }
+    cout << "---------------------------------------\n";
+    cout << "                Results                \n";
+    cout << "---------------------------------------\n";
+    cout << "Corect Guesses: " << score << '\n';
+    cout << "# of Questions: " << size << '\n';
+    cout << "Score: " << (score / (double)size) * 100 << "%";
+
+#pragma endregion
+return 0;
 }
 /*double square(double length) {
     return length * length;
