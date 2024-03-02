@@ -49,6 +49,8 @@ void chooseWinner(char player, char computer);*/
 
 //void sort(int array[], int size);
 
+void swap(string x, string y);
+
 int main()
 {
 #pragma region 기본 C++
@@ -110,15 +112,15 @@ int main()
 
 #pragma region Namespaces
 
-    int x = 0;
+    /*int x = 0;
 
-    //std::cout << x; // x = 0 출력
-    // std::cout << first::x; // x = 1 출력
+    std::cout << x; // x = 0 출력
+    std::cout << first::x; // x = 1 출력
 
     using namespace std;
 
     string name2 = "bro";
-    //cout << "Hello " << name2; // std::cout할떄 std 생략 가능
+    //cout << "Hello " << name2; // std::cout할떄 std 생략 가능*/
 
 #pragma endregion
 
@@ -856,15 +858,45 @@ int main()
 
 #pragma region Memory addresses
 
-    string name = "Yebin";
+    /*string name = "Yebin";
     int age = 18;
     bool student = true;
 
     cout << &name << '\n';
     cout << &age << '\n';
-    cout << &student << '\n';
+    cout << &student << '\n';*/
 
 #pragma endregion
+
+#pragma region Pass by VALUE vs pass by REFERENCE 값에 의한 전달 vs 참조에 의한 전달
+
+// pass by value와 call by value는 원본 값에 대한 접근이 불가능 하기 때문에 원본이 보존될 수 있다는 장점을 가지고 있지만 
+// 값을 넘겨줄 때 마다 복사비용 들기 때문에 시간적인 문제가 발생한다.
+//pass by reference와 call by reference는 원본 값에 대한 직접적인 접근이 가능하므로 원본의 값이 변경될 가능성이 있다는 단점이 있으나
+// pass by value에 대한 단점이 보완 할 수 있다는 장점이 있다.
+
+    /*string x = "Kool-aid";
+    string y = "Water";
+    string temp;
+
+    temp = x;
+    x = y;
+    y = temp;
+
+    cout << "x: " << x << '\n';
+    cout << "y: " << y << '\n';*/
+
+    string x = "Kool-aid";
+    string y = "Water";
+    string temp;
+
+    swap(x, y);
+
+    cout << "x: " << x << '\n';
+    cout << "y: " << y << '\n';
+
+#pragma endregion
+
 
 return 0;
 }
@@ -1031,5 +1063,12 @@ void chooseWinner(char player, char computer) {
         }
     }
 }*/
+
+void swap(string x, string y) {
+    string temp;
+    temp = x;
+    x = y;
+    y = temp;
+}
 
 
