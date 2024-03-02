@@ -52,19 +52,19 @@ void chooseWinner(char player, char computer);*/
 int main()
 {
 #pragma region 기본 C++
-
+    /*
     // 간단한 출력
-    //std::cout << "I like pizza!\n";
-    //std::cout << "It;s really good!\n";
+    std::cout << "I like pizza!\n";
+    std::cout << "It;s really good!\n";
 
     // 선언
     int z = 5;
     int y = 6;
     int sum = z + y;
 
-    //std::cout << z << '\n';
-    //std::cout << y << '\n';
-    //std::cout << sum << '\n';
+    std::cout << z << '\n';
+    std::cout << y << '\n';
+    std::cout << sum << '\n';
 
     // integer (whole number)
     int age = 21;
@@ -88,9 +88,9 @@ int main()
     std::string food = "pizza";
     std::string address = "123 fake st.";
 
-    // std::cout << "Hello " << name << '\n';
-     //std::cout << "You are " << age << "years old";
-
+    std::cout << "Hello " << name << '\n';
+    std::cout << "You are " << age << "years old";
+    */
 #pragma endregion
 
 #pragma region const
@@ -808,12 +808,12 @@ int main()
 
 #pragma region QUIZ GAME
 
-    string questions[] = { "1. What year was C++ created?: ",
+    /*string questions[] = {"1. What year was C++ created?: ",
                            "2. Who invented C++?: ",
                            "3. What is the predecessor of C++?: ",
                            "4. Is the Earth flat?: " };
 
-    string options[][4] = { {"A. 1969","B. 1975","C. 1985","D. 1989" },
+    string options[][4] = {{"A. 1969","B. 1975","C. 1985","D. 1989" },
                           { "A. Guido van Rossum","B. Bjarne Stroustrup","C. John Carmack","D. Mark Zuckerburg" },
                           { "A. C","B. C+","C. C--","D. B++" },
                           { "A. yes","B. no","C. sometimes","D. What's Earth?" } };
@@ -841,7 +841,7 @@ int main()
             score++;
         }
         else {
-            cout << "Bad\n ";
+            cout << "Bad\n";
             cout << "Answer: " << answerKey[i] << '\n';
         }
     }
@@ -850,9 +850,22 @@ int main()
     cout << "---------------------------------------\n";
     cout << "Corect Guesses: " << score << '\n';
     cout << "# of Questions: " << size << '\n';
-    cout << "Score: " << (score / (double)size) * 100 << "%";
+    cout << "Score: " << (score / (double)size) * 100 << "%";*/
 
 #pragma endregion
+
+#pragma region Memory addresses
+
+    string name = "Yebin";
+    int age = 18;
+    bool student = true;
+
+    cout << &name << '\n';
+    cout << &age << '\n';
+    cout << &student << '\n';
+
+#pragma endregion
+
 return 0;
 }
 /*double square(double length) {
