@@ -931,9 +931,9 @@ int main()
     
 #pragma endregion
 
-#pragma region Pointers
+#pragma region Pointer
 
-    string name = "Yebin";
+    /*string name = "Yebin";
     int age = 18;
     string freePizzas[5] = { "pizza1", "pizza2","pizza3","pizza4","pizza5" };
 
@@ -943,7 +943,24 @@ int main()
 
     cout << *pName << '\n';
     cout << *pAge << '\n';
-    cout << *freePizzas << '\n';
+    cout << *freePizzas << '\n';*/
+
+#pragma endregion
+
+#pragma region Null Pointer
+
+    int* pointer = nullptr;
+    int x = 123;
+
+    pointer = &x;
+
+    if (pointer == nullptr) {
+        cout << "address was not assigned!\n";
+    }
+    else {
+        cout << "address was assigned!\n";
+        cout << *pointer;
+    }
 
 #pragma endregion
 
