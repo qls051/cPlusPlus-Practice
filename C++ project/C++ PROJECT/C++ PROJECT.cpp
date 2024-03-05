@@ -53,6 +53,10 @@ void chooseWinner(char player, char computer);*/
 
 //void printInfo(const string name, const int age);
 
+int getDigit(const int number);
+int sumOddDigits(const string cardNumber);
+int sumEvenDigits(const string cardNumber);
+
 int main()
 {
 #pragma region 기본 C++
@@ -908,6 +912,25 @@ int main()
 
 #pragma endregion
 
+#pragma region Credit card validator program
+
+    string cardNumber;
+    int result = 0;
+
+    cout << "Enter a credit card #:";
+    cin >> cardNumber;
+
+    result = sumEvenDigits(cardNumber) + sumOddDigits(cardNumber);
+
+    if (result % 10 == 0) {
+        cout << cardNumber << "is valid";
+    }
+    else {
+        cout << cardNumber << "is not valid";
+    }
+    
+#pragma endregion
+
 
 return 0;
 }
@@ -1087,3 +1110,27 @@ void chooseWinner(char player, char computer) {
     cout << name << '\n';
     cout << age << '\n';
 }*/
+
+int getDigit(const int number) {
+    return number % 10 + (number / 10 % 10);
+}
+int sumOddDigits(const string cardNumber) {
+
+    int sum = 0;
+
+    for (int i = cardNumber.size() - 1; i >= 0; i -= 2) {
+        sum += cardNumber[i] - '0';
+    }
+
+    return sum;
+}
+int sumEvenDigits(const string cardNumber) {
+
+    int sum = 0;
+
+    for (int i = cardNumber.size() - 2; i >= 0; i -= 2) {
+        sum += getDigit((cardNumber[i]-'0')*2);
+    }
+
+    return sum;
+}
