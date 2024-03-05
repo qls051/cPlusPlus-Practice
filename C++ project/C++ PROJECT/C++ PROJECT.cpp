@@ -53,9 +53,9 @@ void chooseWinner(char player, char computer);*/
 
 //void printInfo(const string name, const int age);
 
-int getDigit(const int number);
+/*int getDigit(const int number);
 int sumOddDigits(const string cardNumber);
-int sumEvenDigits(const string cardNumber);
+int sumEvenDigits(const string cardNumber);*/
 
 int main()
 {
@@ -914,7 +914,7 @@ int main()
 
 #pragma region Credit card validator program
 
-    string cardNumber;
+    /*string cardNumber;
     int result = 0;
 
     cout << "Enter a credit card #:";
@@ -927,8 +927,24 @@ int main()
     }
     else {
         cout << cardNumber << "is not valid";
-    }
+    }*/
     
+#pragma endregion
+
+#pragma region Pointers
+
+    string name = "Yebin";
+    int age = 18;
+    string freePizzas[5] = { "pizza1", "pizza2","pizza3","pizza4","pizza5" };
+
+    string* pName = &name;
+    int* pAge = &age;
+    string* pFreePizzas = freePizzas; // 배열이면 & 안 붙힘
+
+    cout << *pName << '\n';
+    cout << *pAge << '\n';
+    cout << *freePizzas << '\n';
+
 #pragma endregion
 
 
@@ -1111,7 +1127,7 @@ void chooseWinner(char player, char computer) {
     cout << age << '\n';
 }*/
 
-int getDigit(const int number) {
+/*int getDigit(const int number) {
     return number % 10 + (number / 10 % 10);
 }
 int sumOddDigits(const string cardNumber) {
@@ -1133,4 +1149,4 @@ int sumEvenDigits(const string cardNumber) {
     }
 
     return sum;
-}
+}*/
