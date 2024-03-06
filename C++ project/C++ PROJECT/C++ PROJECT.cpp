@@ -62,6 +62,7 @@ void playerMove(char* spaces, char player);
 void computerMove(char* spaces, char computer);
 bool checkWinner(char* spaces, char player, char computer);
 bool checkTie(char* spaces);*/
+int factoria(int num);
 
 int main()
 {
@@ -1006,7 +1007,7 @@ int main()
 
 #pragma endregion
 
-#pragma region Dynamic memory
+#pragma region Dynamic memory 동적 메모리
 
     /*int* pNum = NULL;
 
@@ -1018,7 +1019,8 @@ int main()
     cout << "value: " << *pNum << '\n';
 
     delete pNum;*/
-    char* pGrades = NULL;
+
+    /*char* pGrades = NULL;
     int size;
 
     cout << "How many grades to enter in?: ";
@@ -1034,7 +1036,13 @@ int main()
         cout << pGrades[i] << " ";
     }
 
-    delete[] pGrades;
+    delete[] pGrades;*/
+
+#pragma endregion
+
+#pragma region 재귀 함수
+
+cout << factoria(10);
 
 #pragma endregion
 
@@ -1327,3 +1335,19 @@ bool checkTie(char* spaces) {
 
     return 0;
 }*/
+
+int factoria(int num) {
+
+    /*int result = 1;
+    for (int i = 1; i <= num; i++) {
+        result = result * i;
+    }
+    return result;*/
+
+    if (num > 1) {
+        return num * factoria(num - 1);
+    }
+    else {
+        return 1;
+    }
+}
