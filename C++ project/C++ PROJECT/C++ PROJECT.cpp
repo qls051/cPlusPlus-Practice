@@ -14,14 +14,14 @@ using namespace std;
 using text_t = std::string;
 using number_t = int; // typedef로 한 것과 같음
 
-void happyBrithday(std::string brithdaygirl, int age5) {
+/*void happyBrithday(std::string brithdaygirl, int age5) {
     std::cout << "생일 축하해 " << brithdaygirl << '\n';
     std::cout << "생일 축하해 " << age5 << "살 생일" << '\n';
-} // 사용자 정의 함수
+}*/ // 사용자 정의 함수
 
-namespace first {
+/*namespace first {
     int x = 1;
-}
+}*/
 
 //double square(double length);
 
@@ -62,7 +62,13 @@ void playerMove(char* spaces, char player);
 void computerMove(char* spaces, char computer);
 bool checkWinner(char* spaces, char player, char computer);
 bool checkTie(char* spaces);*/
-int factoria(int num);
+
+//int factoria(int num);
+
+template <typename T>
+T max1(T x, T y) {
+    return (x > y) ? x : y;
+}
 
 int main()
 {
@@ -1042,7 +1048,13 @@ int main()
 
 #pragma region 재귀 함수
 
-cout << factoria(10);
+    //cout << factoria(10);
+
+#pragma endregion
+
+#pragma region Function templates
+
+    cout << max1(1, 2) << '\n';
 
 #pragma endregion
 
@@ -1336,13 +1348,7 @@ bool checkTie(char* spaces) {
     return 0;
 }*/
 
-int factoria(int num) {
-
-    /*int result = 1;
-    for (int i = 1; i <= num; i++) {
-        result = result * i;
-    }
-    return result;*/
+/*int factoria(int num) {
 
     if (num > 1) {
         return num * factoria(num - 1);
@@ -1350,4 +1356,4 @@ int factoria(int num) {
     else {
         return 1;
     }
-}
+}*/
