@@ -65,10 +65,10 @@ bool checkTie(char* spaces);*/
 
 //int factoria(int num);
 
-template <typename T>
+/*template <typename T>
 T max1(T x, T y) {
     return (x > y) ? x : y;
-}
+}*/
 
 int main()
 {
@@ -112,11 +112,17 @@ int main()
     std::cout << "Hello " << name << '\n';
     std::cout << "You are " << age << "years old";
     */
+
+    struct student {
+        std::string name;
+        double gpa;
+        bool enrolled;
+    };
 #pragma endregion
 
 #pragma region const
 
-    double pi = 3.14159;
+    /*double pi = 3.14159;
     double radius = 10;
     double circumference = 2 * pi * radius;
 
@@ -125,7 +131,7 @@ int main()
     const double PI = 3.14159;
     const int LIGHT_SPEED = 299792458;
     const int WIDTH = 1920;
-    const int HEIGHT = 1080;
+    const int HEIGHT = 1080;*/
 
 #pragma endregion
 
@@ -1054,12 +1060,23 @@ int main()
 
 #pragma region Function templates
 
-    cout << max1(1, 2) << '\n';
+    //cout << max1(1, 2) << '\n';
 
 #pragma endregion
 
+#pragma region struct 구조체
 
-return 0;
+    student student1;
+    student1.name = "Spngebob";
+    student1.gpa = 3.2;
+    student1.enrolled = true;
+
+    cout << student1.name << '\n';
+    cout << student1.gpa << '\n';
+    cout << student1.enrolled << '\n';
+
+#pragma endregion
+
 }
 /*double square(double length) {
     return length * length;
