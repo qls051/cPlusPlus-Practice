@@ -70,6 +70,15 @@ T max1(T x, T y) {
     return (x > y) ? x : y;
 }*/
 
+struct Car {
+    std::string model;
+    int year;
+    std::string color;
+};
+
+void printCar(Car &car);
+void paintCar(Car& car, std::string color);
+
 int main()
 {
 #pragma region 기본 C++
@@ -113,11 +122,12 @@ int main()
     std::cout << "You are " << age << "years old";
     */
 
-    struct student {
+    /*struct student {
         std::string name;
         double gpa;
         bool enrolled;
-    };
+    };*/ // struct 선언할때 ; 꼭 찍기
+
 #pragma endregion
 
 #pragma region const
@@ -1066,17 +1076,40 @@ int main()
 
 #pragma region struct 구조체
 
-    student student1;
+    /*student student1;
     student1.name = "Spngebob";
     student1.gpa = 3.2;
     student1.enrolled = true;
 
     cout << student1.name << '\n';
     cout << student1.gpa << '\n';
-    cout << student1.enrolled << '\n';
+    cout << student1.enrolled << '\n';*/
 
 #pragma endregion
 
+#pragma region Pass structs as arguments
+
+    Car car1;
+    Car car2;
+
+    car1.model = "Mustang";
+    car1.year = 2023;
+    car1.color = "red";
+
+    car2.model = "Corvette";
+    car2.year = 2024;
+    car2.color = "blue";
+
+    paintCar(car1, "silver");
+    paintCar(car2, "gold");
+
+    cout << &car1 << '\n';
+    printCar(car1);
+    printCar(car2);
+    
+
+#pragma endregion
+    return 0;
 }
 /*double square(double length) {
     return length * length;
@@ -1374,3 +1407,13 @@ bool checkTie(char* spaces) {
         return 1;
     }
 }*/
+
+void printCar(Car &car) {
+    cout << &car << '\n';
+    cout << car.model << '\n';
+    cout << car.year << '\n';
+    cout << car.color << '\n';
+}
+void paintCar(Car& car, std::string color) {
+    car.color = color;
+}
