@@ -8,6 +8,9 @@
 #include <ctime> // 시간
 #include <iomanip>
 
+enum Day {sunday = 0, monday = 1, tuesday = 2, wendesday = 3, 
+    thursday = 4, friday = 5, saturday = 6};
+
 using namespace std;
 //typedef std::string text_t;
 //typedef int number_t;
@@ -70,14 +73,14 @@ T max1(T x, T y) {
     return (x > y) ? x : y;
 }*/
 
-struct Car {
+/*(struct Car {
     std::string model;
     int year;
     std::string color;
-};
+};*/
 
-void printCar(Car &car);
-void paintCar(Car& car, std::string color);
+//void printCar(Car &car);
+//void paintCar(Car& car, std::string color);
 
 int main()
 {
@@ -1089,7 +1092,7 @@ int main()
 
 #pragma region Pass structs as arguments
 
-    Car car1;
+    /*Car car1;
     Car car2;
 
     car1.model = "Mustang";
@@ -1105,10 +1108,34 @@ int main()
 
     cout << &car1 << '\n';
     printCar(car1);
-    printCar(car2);
-    
+    printCar(car2);*/
 
 #pragma endregion
+
+#pragma region enum
+
+    Day today = sunday;
+
+    switch (today)
+    {
+    case sunday: cout << "Sunday\n";
+        break;
+    case monday:cout << "Monday\n";
+        break;
+    case tuesday:cout << "수\n";
+        break;
+    case wendesday:cout << "목\n";
+        break;
+    case thursday:cout << "금\n";
+        break;
+    case friday:cout << "토\n";
+        break;
+    case saturday:cout << "일\n";
+        break;
+    }
+
+#pragma endregion
+
     return 0;
 }
 /*double square(double length) {
@@ -1408,7 +1435,7 @@ bool checkTie(char* spaces) {
     }
 }*/
 
-void printCar(Car &car) {
+/*void printCar(Car& car) {
     cout << &car << '\n';
     cout << car.model << '\n';
     cout << car.year << '\n';
@@ -1416,4 +1443,4 @@ void printCar(Car &car) {
 }
 void paintCar(Car& car, std::string color) {
     car.color = color;
-}
+}*/
